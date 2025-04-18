@@ -1,12 +1,11 @@
 {
-  "name": "note-keeping-app",
+  "name": "note-keeping-frontend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Frontend for the Note Keeping App",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "live-server src --port=8080"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
 }
