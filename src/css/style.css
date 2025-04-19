@@ -1,0 +1,113 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f6f2 repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 18rem;
+  max-width: 1300px;
+}
+
+.content-section {
+  margin-left: 2rem;
+}
+
+.content-section h1 {
+  font-size: 2rem;
+  margin: 0.3rem 0 1.7rem;
+  font-weight: 350;
+}
+
+.content-section button {
+  font-size: 1.5rem;
+  min-height: 2.5rem;
+  min-width: 12rem;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-btn {
+  background-color: #00a82d;
+  color: #f9f6f2;
+}
+
+button:hover {
+  box-shadow: 5px 5px 0px 0px #262626;
+  transform: scale(1.03);
+}
+
+.article-section {
+  position: relative;
+}
+
+.note-card {
+  background-color: #fff8f8;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px 0px #262626;
+  padding: 1rem;
+  max-width: 16rem;
+  min-height: 14rem;
+  position: relative;
+  z-index: 2;
+}
+
+.note-card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #262626;
+}
+
+.note-card .note-date {
+  font-size: 0.9rem;
+  color: #555555;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.note-card hr {
+  border: none;
+  border-top: 1px dashed #bbb;
+  margin: 0.5rem 0;
+}
+
+.note-card .note-body {
+  font-size: 1.25rem;
+  color: #262626;
+  line-height: 1.4;
+}
+
+.icon {
+  position: absolute;
+}
+
+.yellow-icon {
+  width: 100px;
+  height: 100px;
+  top: -1.875rem;
+  right: 14.688rem;
+}
+
+.blue-icon {
+  width: 100px;
+  height: 100px;
+  top: 13.125rem;
+  right: 14.063rem;
+}
+
+.red-icon {
+  width: 100px;
+  height: 100px;
+  top: 5rem;
+  right: -3.438rem;
+}
