@@ -26,13 +26,17 @@ main {
 }
 
 .content-section button {
-  font-size: 1.5rem;
   min-height: 2.5rem;
   min-width: 12rem;
   border-radius: 5px;
   border: 1px solid #262626;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+.content-section button a{
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .start-btn {
@@ -59,7 +63,13 @@ button:hover {
   min-height: 14rem;
   position: relative;
   z-index: 2;
+  transition: all 0.3s ease;
 }
+
+/* .note-card:hover{
+  box-shadow: 5px 5px 0px 0px #262626;
+  transform: scale(1.03);
+} */
 
 .note-card h2 {
   margin: 0;
@@ -103,6 +113,7 @@ button:hover {
   height: 100px;
   top: 80%;
   right: 80%;
+  /* animation: rotate-blue-icon 5s infinite; */
 }
 
 .red-icon {
@@ -111,6 +122,11 @@ button:hover {
   top: 40%;
   right: -22%;
 }
+
+@keyframes rotate-blue-icon {
+  50% {transform: rotate(180deg);}
+}
+
 
 @media (max-width: 1024px) {
   main {

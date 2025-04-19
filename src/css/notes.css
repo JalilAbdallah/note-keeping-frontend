@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+
+body {
+  font-family: "ABeeZee", sans-serif;
+  background: #f9f6f2 repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+}
+
+main {
+  display: block;
+  max-width: 1300px;
+  width: 100%;
+}
+
+.notes-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 15rem;
+}
+
+.note-card {
+  background-color: #fff8f8;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  max-width: 12rem;
+  min-height: 15rem;
+}
+
+.note-card:hover {
+  box-shadow: 5px 5px 0px 0px #262626;
+  transform: scale(1.03);
+}
+
+.note-card h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #262626;
+}
+
+.note-card .note-date {
+  font-size: 0.813rem;
+  color: #555555;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.note-card hr {
+  border: none;
+  border-top: 1px dashed #bbb;
+  margin: 0.5rem 0;
+}
+
+.note-card .note-body {
+  font-size: 0.65rem;
+  color: #262626;
+  line-height: 2.2;
+  font-weight: 350;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.create-note {
+  background-color: #82dea1;
+  color: #262626;
+  font-weight: bold;
+  padding-bottom: 0rem;
+}
+
+.create-note h2 {
+  line-height: 1.9rem;
+}
+
+.create-note h2 .create-p {
+  font-size: 2rem;
+}
+
+.create-note h2 .new-p {
+  font-size: 2.188rem;
+}
+
+.create-note h2 .note-p {
+  font-size: 2.688rem;
+}
+
+.create-note img {
+  width: 100%;
+  margin-top: auto;
+}
