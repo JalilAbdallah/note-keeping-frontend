@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "description": "Frontend for the Note Keeping App",
   "scripts": {
-    "start": "live-server ./ --port=8080 --entry-file=src/index.html"
+    "format": "prettier --write .",
+    "start": "live-server ./ --port=8080 --entry-file=src/index.html",
+    "dev": "vite",
+    "build": "vite build"
   },
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "prettier": "^3.5.3",
+    "vite": "^6.3.3"
+  },
+  "dependencies": {
+    "plotly.js-dist-min": "^3.0.1"
   }
 }
