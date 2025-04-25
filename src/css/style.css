@@ -34,7 +34,7 @@ main {
   transition: all 0.3s ease;
 }
 
-.content-section button a{
+.content-section button a {
   text-decoration: none;
   font-size: 1.5rem;
 }
@@ -124,9 +124,10 @@ button:hover {
 }
 
 @keyframes rotate-blue-icon {
-  50% {transform: rotate(180deg);}
+  50% {
+    transform: rotate(180deg);
+  }
 }
-
 
 @media (max-width: 1024px) {
   main {
