@@ -12,8 +12,14 @@ const renderNotes = (notes) => {
 
     noteCard.innerHTML = `
           <header>
-            <h2>${note.title}</h2>
-            <time datetime="${note.createdAt}" class="note-date">${formatDate(note.createdAt)}</time>
+            <div class="note-header">
+              <h2>${note.title}</h2>
+              <time datetime="${note.createdAt}" class="note-date">${formatDate(note.createdAt)}</time>
+            </div>
+
+            <button class="delete-btn" aria-label="Delete note" title="Delete note">
+              <i class="ph ph-trash"></i>
+            </button>
           </header>
           <hr />
           <p class="note-body">${note.content}</p>

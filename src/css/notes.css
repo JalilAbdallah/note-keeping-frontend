@@ -56,6 +56,33 @@ main {
   margin-bottom: 0.5rem;
 }
 
+.note-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-card .delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.note-card .delete-btn i {
+  font-size: 1.2rem;
+  color: #931111;
+  transition: color 0.25s ease;
+}
+
+.note-card .delete-btn:hover {
+  transform: scale(1.15);
+}
+
+.note-card .delete-btn:hover i {
+  color: #ff1f1f;
+}
+
 .note-card hr {
   border: none;
   border-top: 1px dashed #bbb;
@@ -144,6 +171,10 @@ main {
 
   .create-note h2 .note-p {
     font-size: 2.2rem;
+  }
+
+  .note-card .delete-btn {
+    font-size: 0.8rem;
   }
 }
 
