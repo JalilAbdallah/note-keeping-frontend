@@ -25,6 +25,22 @@
         </article>
       </section>
     </main>
+
+    <dialog id="deleteDialog">
+      <form method="dialog" class="dialog-content">
+        <p class="dialog-text">Are you sure you want to delete this note?</p>
+
+        <menu>
+          <button value="cancel" class="btn secondary">Cancel</button>
+          <button
+            value="confirm"
+            class="btn danger"
+            aria-label="Delete note permanently">
+            Delete
+          </button>
+        </menu>
+      </form>
+    </dialog>
   </body>
 
   <script src="../js/api.js" defer></script>
