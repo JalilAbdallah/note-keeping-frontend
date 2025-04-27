@@ -19,8 +19,7 @@ const buildNoteCard = (note) => {
       <h2>${note.title}</h2>
       <time datetime="${note.createdAt}" class="note-date">${formatDate(note.createdAt)}</time>
     </div>
-
-    <button class="delete-btn" aria-label="Delete note" title="Delete note">
+    <button class="option delete-btn" aria-label="Delete note" title="Delete note">
       <i class="ph ph-trash"></i>
     </button>
   </header>
@@ -39,4 +38,11 @@ const removeNoteCardById = (id) => {
 const addNoteCard = (note) => {
   const container = document.querySelector(".notes-section");
   container.insertBefore(buildNoteCard(note), container.children[1]);
+};
+
+const updateNoteCard = (card, data) => {
+  card.querySelector("h2").textContent = data.title;
+  card.querySelector(".note-body").textContent = data.content;
+
+  console.log(card);
 };

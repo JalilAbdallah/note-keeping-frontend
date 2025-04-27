@@ -33,3 +33,13 @@ const createNote = async (data) => {
   if (!response.ok) throw new Error("Server returned " + res.status);
   return response.json();
 };
+
+const updateNote = async (id, data) => {
+  const res = await fetch(`${BASE_URL}/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) throw new Error(`Failed to update note: ${res.status}`);
+  return res.json();
+};

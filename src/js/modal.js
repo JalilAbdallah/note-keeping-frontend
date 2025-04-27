@@ -11,9 +11,17 @@ const openConfirmDelete = () => {
   });
 };
 
-function openCreateNote() {
+function openNoteDialog(mode = "create", initialData = {}) {
   const dialog = document.getElementById("createDialog");
   const form = dialog.querySelector("form");
+  const h2 = form.querySelector("h2");
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  h2.textContent = mode === "edit" ? "Edit note" : "Create a new note";
+  submitBtn.textContent = mode === "edit" ? "Save changes" : "Save";
+  form.noteTitle.value = initialData.title ?? "";
+  form.noteContent.value = initialData.content ?? "";
+
   return new Promise((resolve) => {
     const submit = (e) => {
       console.log("submit");
@@ -27,6 +35,7 @@ function openCreateNote() {
         content: data.noteContent.trim(),
       });
     };
+
     const close = () => {
       form.reset();
       dialog.close();
