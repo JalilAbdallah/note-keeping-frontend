@@ -35,3 +35,8 @@ const removeNoteCardById = (id) => {
   const card = document.querySelector(`.note-card[data-id="${id}"]`);
   if (card) card.remove();
 };
+
+const addNoteCard = (note) => {
+  const container = document.querySelector(".notes-section");
+  container.insertBefore(buildNoteCard(note), container.children[1]);
+};

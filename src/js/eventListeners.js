@@ -1,22 +1,19 @@
-const setupEventListeners = () => {
-  const notesSection = document.querySelector(".notes-section");
+const notesSection = document.querySelector(".notes-section");
 
-  notesSection.addEventListener("click", (e) => {
-    const trashBtn = e.target.closest(".delete-btn");
-    if (!trashBtn) return;
+notesSection.addEventListener("click", async (e) => {
+  if (e.target.closest(".delete-btn")) {
+    const card = e.target.closest(".note-card");
+    console.log(card);
 
-    const card = trashBtn.closest(".note-card");
-    const id = card.dataset.id;
+    if (await openConfirmDelete()) {
+      await deleteNote(card.dataset.id);
+      removeNoteCardById(card.dataset.id);
+    }
+    return;
+  }
 
-    openConfirmDelete(async (confirmed) => {
-      if (!confirmed) return;
-
-      try {
-        await deleteNote(id);
-        removeNoteCardById(id);
-      } catch (err) {
-        alert("Could not delete note: " + err.message);
-      }
-    });
-  });
-};
+  if (e.target.closest(".create-note")) {
+    const data = await openCreateNote();
+    if (data) addNoteCard(await createNote(data));
+  }
+});

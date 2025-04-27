@@ -22,3 +22,14 @@ const deleteNote = async (id) => {
   const response = await fetch(`${BASE_URL}/${id}`, { method: "DELETE" });
   if (!response.ok) throw new Error("Failed to delete note");
 };
+
+const createNote = async (data) => {
+  const response = await fetch(`${BASE_URL}/`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  if (!response.ok) throw new Error("Server returned " + res.status);
+  return response.json();
+};
