@@ -41,13 +41,47 @@
         </menu>
       </form>
     </dialog>
+
+    <dialog id="createDialog">
+      <form method="dialog" class="dialog-content">
+        <h2>Create a new note</h2>
+
+        <label for="noteTitle">
+          Title
+          <input
+            type="text"
+            id="noteTitle"
+            required
+            maxlength="80"
+            name="noteTitle" />
+        </label>
+
+        <label for="noteBody">
+          Description
+          <textarea
+            id="noteBody"
+            rows="6"
+            required
+            name="noteContent"></textarea>
+        </label>
+
+        <menu>
+          <button type="button" value="cancel" class="btn secondary">
+            Cancel
+          </button>
+          <button type="submit" value="confirm" class="btn primary">
+            Save
+          </button>
+        </menu>
+      </form>
+    </dialog>
   </body>
 
   <script src="../js/api.js" defer></script>
   <script src="../js/utils.js" defer></script>
   <script src="../js/ui.js" defer></script>
-  <script src="../js/modal.js" defer></script>
   <script src="../js/eventListeners.js" defer></script>
+  <script src="../js/modal.js" defer></script>
   <script src="../js/script.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
 </html>
