@@ -35,6 +35,7 @@ main {
   flex-direction: column;
   max-width: 12rem;
   min-height: 15rem;
+  cursor: pointer;
 }
 
 .note-card:hover {
@@ -62,20 +63,24 @@ main {
   align-items: center;
 }
 
-.note-card .delete-btn {
+.note-card .option {
   background: transparent;
   border: none;
   cursor: pointer;
   transition: transform 0.25s ease;
+  padding: 1px 1px;
 }
 
-.note-card .delete-btn i {
+.note-card .option i {
   font-size: 1.2rem;
-  color: #931111;
   transition: color 0.25s ease;
 }
 
-.note-card .delete-btn:hover {
+.note-card .delete-btn i {
+  color: #931111;
+}
+
+.note-card .option:hover {
   transform: scale(1.15);
 }
 
